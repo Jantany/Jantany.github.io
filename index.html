@@ -104,26 +104,36 @@ nav {
     <h2>Let's Keep in Touch</h2>
     <p>I welcome thoughtful conversations and different points of view.</p>
 
-    <form action="https://formspree.io/f/xzerooqn" method="POST">
-      <p>
-        <label for="name">Your Name</label><br>
-        <input type="text" id="name" name="name" required>
-      </p>
+    <button type="button" onclick="document.getElementById('contact-dialog').showModal()">
+      Send me a message
+    </button>
 
-      <p>
-        <label for="email">Your Email</label><br>
-        <input type="email" id="email" name="email" required>
-      </p>
+    <dialog id="contact-dialog">
+      <h2>Send Me a Message</h2>
 
-      <p>
-        <label for="message">Your Message</label><br>
-        <textarea id="message" name="message" rows="6" required></textarea>
-      </p>
+      <form action="https://formspree.io/f/xzerooqn" method="POST">
+        <p>
+          <label for="name">Your Name</label><br>
+          <input type="text" id="name" name="name" required>
+        </p>
 
-      <p>
+        <p>
+          <label for="email">Your Email</label><br>
+          <input type="email" id="email" name="email" required>
+        </p>
+
+        <p>
+          <label for="message">Your Message</label><br>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </p>
+
         <button type="submit">Send Message</button>
-      </p>
-    </form>
+      </form>
+
+      <button type="button" onclick="document.getElementById('contact-dialog').close()">
+        Close
+      </button>
+    </dialog>
 </section>
 
   <footer>
