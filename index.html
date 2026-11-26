@@ -103,10 +103,28 @@ nav {
   <section id="contact">
     <h2>Let's Keep in Touch</h2>
     <p>I welcome thoughtful conversations and different points of view.</p>
-    <p>
-  <a href="https://formspree.io/f/xzerooqn">Send me a message</a>
-</p>
-  </section>
+
+    <form action="https://formspree.io/f/xzerooqn" method="POST">
+      <p>
+        <label for="name">Your Name</label><br>
+        <input type="text" id="name" name="name" required>
+      </p>
+
+      <p>
+        <label for="email">Your Email</label><br>
+        <input type="email" id="email" name="email" required>
+      </p>
+
+      <p>
+        <label for="message">Your Message</label><br>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </p>
+
+      <p>
+        <button type="submit">Send Message</button>
+      </p>
+    </form>
+</section>
 
   <footer>
     <p>Thank you for visiting My Writing Corner.</p>
