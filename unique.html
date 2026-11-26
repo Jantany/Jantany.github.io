@@ -44,7 +44,31 @@ nav a {
     section {
   padding: 10px 0;
 }
+.unique-layout {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
 
+.unique-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.book-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.unique-sidebar a {
+  color: #704b3a;
+  font-weight: bold;
+}
+
+.unique-sidebar p {
+  margin: 12px 0;
+}
     .novel-text {
       font-size: 17px;
       line-height: 1.9;
@@ -82,10 +106,19 @@ nav a {
     }
 
     @media (max-width: 600px) {
-      h1 {
-        font-size: 36px;
-      }
-    }
+  h1 {
+    font-size: 36px;
+  }
+
+  .unique-layout {
+    flex-direction: column;
+  }
+
+  .unique-sidebar {
+    width: 100%;
+    max-width: 250px;
+  }
+}
   </style>
 </head>
 
@@ -103,7 +136,15 @@ nav a {
   <a href="index.html#contact">Contact</a>
 </nav>
 
-<section class="novel-text">
+<div class="unique-layout">
+  <aside class="unique-sidebar">
+    <img src="Book.jpg" alt="Book" class="book-photo">
+
+    <p><a href="Video%201.MP4" target="_blank">Watch Video 1</a></p>
+    <p><a href="Video%202.MP4" target="_blank">Watch Video 2</a></p>
+  </aside>
+
+  <section class="novel-text">
 
   <p class="opening">
     I think, therefore, we are.
@@ -166,19 +207,7 @@ nav a {
 
 </section>
 
-<!-- Video 1 -->
-<section class="video-section">
-  <video controls style="width: 100%; max-width: 850px;">
-    <source src="Video%201.MP4" type="video/mp4">
-    Your browser does not support video playback.
-  </video>
-
-  <!-- Video 2 -->
-  <video controls style="width: 100%; max-width: 850px;">
-    <source src="Video%202.MP4" type="video/mp4">
-    Your browser does not support video playback.
-  </video>
-</section>
+</div>
 
 <footer>
   <p>&copy; 2026 Jantany L. Fleishman. All rights reserved.</p>
